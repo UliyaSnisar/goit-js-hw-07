@@ -1,0 +1,27 @@
+.list-item img {
+  width: 500px;
+  height: 300px;
+}
+
+.list-item img {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.list-item img:hover {
+  opacity: 1;
+}
+
+/* task-06 */
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}

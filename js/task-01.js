@@ -1,7 +1,10 @@
+const categorysRef = document.querySelectorAll('li.item');
+console.log(categorys);
 
-console.log('Колличество категорий: ', document.querySelectorAll('li.item').length);
+console.log('Колличество категорий: ', categorysRef.length);
 
-document.querySelectorAll('li.item').forEach(value => console.log(
+
+categorysRef.forEach(value => console.log(
 `Категория: ${value.querySelector('h2').textContent},
 Количество элементов: ${value.querySelectorAll('li').length}`,
   )); 

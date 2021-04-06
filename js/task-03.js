@@ -16,16 +16,18 @@ const images = [
   },
 ];
 
-const imgContainer = document.querySelector('#gallery');
+const imgContainerRef = document.querySelector('#gallery');
+console.log(imgContainerRef);
 
-const listImg = images.map(({ url, alt }) => {
+const listImg = images.map(({url, alt}) => {
   const li = document.createElement('li');
   li.classList.add('list-item');
-  li.insertAdjacentHTML(
-    'afterbegin',
-    `<img src='${url}' alt='${alt}' onclick='getImg(this)'>`,
-  );
+  li.insertAdjacentHTML('afterbegin', `<img src='${url}' alt='${alt}'>`);
+  console.log(li);
+
   return li;
 });
 
-imgContainer.append(...listImg);
+console.log(listImg);
+
+imgContainerRef.append(...listImg);

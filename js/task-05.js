@@ -1,8 +1,12 @@
-const input = document.querySelector('#name-input');
-const text = document.querySelector('#name-output');
+const refs = {
+    input: document.querySelector('#name-input'),
+    text: document.querySelector('#name-output')
+};
+console.log(refs.input);
+console.log(refs.text);
 
-function cangeInput() { 
-    text.textContent = input.value ? input.value : 'незнакомец';
-}
+function changeInput(){
+    refs.text.textContent = refs.input.value ? refs.input.value : 'незнакомец';
+};
 
-input.addEventListener('keyup', cangeInput);
+refs.input.addEventListener('keydown', changeInput);

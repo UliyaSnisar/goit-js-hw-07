@@ -1,20 +1,20 @@
 const input = document.querySelector('#validation-input');
-console.log(input);
+// console.log(input);
 
-function changeInp() { 
+function changeInput(){
     const length = input.getAttribute('data-length');
 
-    addClass(input.value.length === Number(length) ? true : false);
+    addClass(input.value.length === Number(length) ? true : false)
 }
 
-function addClass(passed) { 
-    if (passed) {
+function addClass(passed){
+    if(passed){
         input.classList.add('valid');
         input.classList.remove('invalid');
-    } else { 
+    }else{
         input.classList.add('invalid');
         input.classList.remove('valid');
-    }
-}
+        }
+};
 
-input.addEventListener('blur', changeInp);
+input.addEventListener('blur', changeInput);

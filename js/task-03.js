@@ -17,17 +17,19 @@ const images = [
 ];
 
 const imgContainerRef = document.querySelector('#gallery');
-console.log(imgContainerRef);
+const listMarkup = createImgList(images);
 
-const listImg = images.map(({url, alt}) => {
-  const li = document.createElement('li');
-  li.classList.add('list-item');
-  li.insertAdjacentHTML('afterbegin', `<img src='${url}' alt='${alt}'>`);
-  console.log(li);
+imgContainerRef.insertAdjacentHTML('beforeend', listMarkup);
 
-  return li;
-});
-
-console.log(listImg);
-
-imgContainerRef.append(...listImg);
+function createImgList (images){
+  return images.map(({url, alt}) => {
+    return `
+    <li
+    class="list-item">
+    <img 
+    src="${url}" 
+    alt="${alt}"
+    >
+    </li>`;
+  }).join('');
+};

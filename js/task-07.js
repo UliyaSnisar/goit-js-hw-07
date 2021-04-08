@@ -14,10 +14,3 @@ changeSize();
 refs.input.addEventListener('input', changeSize)
 
 
-// function changeSize() {
-//   text.style.fontSize = `${input.value}px`;
-// }
-
-// changeSize();
-
-// input.addEventListener('input', changeSize);
